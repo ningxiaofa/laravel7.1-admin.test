@@ -85,8 +85,16 @@ Route::get('user/{id}/profile', function ($id) {
 // 路由模型绑定 - 隐式绑定
 Route::get('users/{user}', function (App\User $user) {
     // 如果没有查到数据，不会执行到这里
-    if(!$user->email){
-        return ['status' => 0, 'message' => 'not found'];
-    }
-    return ['status' => 1, 'data' => $user->email];    
+    // if(!$user->email){
+    //     return ['status' => 0, 'message' => 'not found'];
+    // }
+    // return ['status' => 1, 'data' => $user->email];
+    
+    //var_dump($user);// 跟 return $user; 结果不同, 因为是对象.存在私有属性/方法
+    return $user;
 });
+
+
+// 学习mysql date/time/datetime/timestamp/year
+Route::post('datetime', 'DateTimeController@save');
+Route::get('datetime', 'DateTimeController@get');
