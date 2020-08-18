@@ -98,3 +98,8 @@ Route::get('users/{user}', function (App\User $user) {
 // 学习mysql date/time/datetime/timestamp/year
 Route::post('datetime', 'DateTimeController@save');
 Route::get('datetime', 'DateTimeController@get');
+
+Route::any('ajax', function(Request $request){
+    return $_SERVER;
+    var_dump($_SERVER);
+});

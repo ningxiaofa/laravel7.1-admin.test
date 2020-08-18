@@ -1,0 +1,8 @@
+AB 压力测试:
+
+ab [options] [http[s]://]hostname[:port]/path
+ab -n 100 -c 10 http://www.baidu.com/
+
+测试接口:
+ab -n 1000 -c 100 http://laravel7.1-admin.test/datetime  //查询接口[读]
+ab -n 10 -c 5 -m post http://laravel7.1-admin.test/datetime  //插入接口[写]
