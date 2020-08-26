@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 
 Route::any('/', function (Request $request) {
     return view('welcome');
-});
+})->name('index');
 
 // Just for test
 Route::any('/test', function (Request $request) {
@@ -103,3 +103,8 @@ Route::any('ajax', function(Request $request){
     return $_SERVER;
     var_dump($_SERVER);
 });
+
+// ============================== 学习中间件
+// echo "hello"; // 实际可以执行
+// echo "</br>";
+require_once __DIR__.'/anotherWeb.php';

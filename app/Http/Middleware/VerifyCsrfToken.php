@@ -12,9 +12,12 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        'test',
-        'form',
-        'ajax',
-        'datetime'
+        // 'test',
+        // 'form',
+        // 'ajax',
+        // 'datetime',
+        // 'middleware',
+        // 'tokenAndAuth',
+        '*' //表示所有的路由都是不通过csrf检查
     ];
 }
